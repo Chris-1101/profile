@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" />
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Profile Page</title>
   </head>
   <body>
 
-    <div class="container">
+    <div id="sidebar">
+      <ul>
+        <li><a href="#top"><i class="fas fa-home" title="Top"></i></a></li>
+        <li><a href="#langs"><i class="fas fa-code" title="Languages"></i></a></li>
+        <li><a href="#films"><i class="fas fa-film" title="Films"></i></a></li>
+      </ul>
+    </div>
+
+    <div id="page-content" class="container">
       <div id="profile" class="card">
-        <img id="profile-pic" class="img-circle" src="images/profile.png" alt="Chris' Profile" />
-        <h1>Chris MacBain</h1>
-        <h2>
-          Programmer
-          <img id="parrot" src="images/parrot.gif" alt="Party Parrot FTW!" />
-        </h2>
-        <p>I spent 2 years at the University of Alicante in IT Engineering before dropping out in favour of using my languages to work as a freelance translator & transcriber for a while. Spent the last few months pursuing a career in programming.</p>
+        <div id="info">
+          <img id="profile-pic" class="img-circle" src="images/profile.png" alt="Chris' Profile" />
+          <h1>Chris MacBain</h1>
+          <h2>
+            Programmer
+            <img id="parrot" src="images/parrot.gif" alt="Party Parrot FTW!" />
+          </h2>
+          <p>I spent 2 years at the University of Alicante in IT Engineering before dropping out in favour of using my languages to work as a freelance translator & transcriber for a while. Spent the last few months pursuing a career in programming.</p>
+        </div>
         <div id="social">
           <ul class="list-inline flex">
             <li><a href="https://github.com/Chris-1101"><i class="fab fa-github"></i><br />GitHub</a></li>
@@ -29,7 +39,7 @@
         </div>
       </div>
 
-      <h2>Languages</h2>
+      <h2 id="langs">Languages</h2>
 
       <div id="languages" class="card">
         <ul class="list-inline flex">
@@ -50,8 +60,10 @@
                 <img class="resize" src="images/aliens.jpg" alt="Aliens Poster" />
               </td>
               <td>
-                <h3>Aliens</h3>
-                <p>Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have impressive firepower, but will that be enough?</p>
+                <div class="description">
+                  <h3>Aliens</h3>
+                  <p>Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have impressive firepower, but will that be enough?</p>
+                </div>
               </td>
             </tr>
             <tr>
@@ -59,8 +71,10 @@
                 <img class="resize" src="images/badboys2.jpg" alt="Bad Boys II Poster" />
               </td>
               <td>
-                <h3>Bad Boys II</h3>
-                <p>Two loose-cannon narcotics cops investigate the flow of Ecstasy into Florida from a Cuban drug cartel.</p>
+                <div class="description">
+                  <h3>Bad Boys II</h3>
+                  <p>Two loose-cannon narcotics cops investigate the flow of Ecstasy into Florida from a Cuban drug cartel.</p>
+                </div>
               </td>
             </tr>
             <tr>
@@ -68,8 +82,10 @@
                 <img class="resize" src="images/oceans11.jpg" alt="Ocean's 11 Poster" />
               </td>
               <td>
-                <h3>Ocean's 11</h3>
-                <p>Danny Ocean and his eleven accomplices plan to rob three Las Vegas casinos simultaneously.</p>
+                <div class="description">
+                  <h3>Ocean's 11</h3>
+                  <p>Danny Ocean and his eleven accomplices plan to rob three Las Vegas casinos simultaneously.</p>
+                </div>
               </td>
             </tr>
           </tbody>

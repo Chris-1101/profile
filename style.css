@@ -5,10 +5,12 @@
 }
 
 body {
-  background: #eee;
+  /* background: #eee; */
+  background: url('https://source.unsplash.com/OGj-lUI9TBQ/1600x900') fixed;
   font: 300 16px 'Open Sans', sans-serif;
   color: #00171f;
   line-height: 1.5em;
+  padding-top: 10px;
 }
 
 h1, h2, h3 {
@@ -23,11 +25,11 @@ h1 {
 
 h2 {
   font-size: 22px;
-  color: #007ea7;
+  color: #ccc;
 }
 
 a {
-  color: #00a7e1;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -48,6 +50,30 @@ li {
   text-align: center;
 }
 
+#sidebar {
+  position: fixed;
+  width: 70px;
+  height: 342px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  margin: 18px 20px;
+  border-radius: 3px;
+}
+
+#sidebar li {
+  margin: 30px auto;
+}
+
+#sidebar a {
+  font-size: 20px;
+}
+
+#page-content {
+  margin-left: 100px;
+}
+
 #profile {
   background: linear-gradient(
     rgba(255, 255, 255, 0.9),
@@ -55,6 +81,15 @@ li {
   ),
   url('https://images.unsplash.com/photo-1490938591846-d23d23fef9f6') 0 0 no-repeat;
   background-size: cover;
+  height: 300px;
+}
+
+#info { /* Dirty hack... */
+  min-height: 184px;
+}
+
+#profile h2 {
+  color: #007ea7;
 }
 
 #profile-pic {
@@ -98,7 +133,7 @@ li {
 }
 
 #films td:nth-child(2) {
-  padding: 0 30px;
+  padding-left: 30px;
 }
 
 .img-circle {
@@ -108,20 +143,16 @@ li {
 }
 
 .container {
-  width: 700px;
+  width: 90%;
   margin: 0 auto;
 }
 
-.card {
+.card, .description {
   background: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.list-inline {
-  display: inline-block;
 }
 
 .flex {
@@ -138,14 +169,52 @@ li {
   .container {
     width: 700px;
   }
+  #sidebar {
+    display: none;
+  }
+  #page-content {
+    margin: 0 auto;
+  }
+  #profile {
+    height: auto;
+  }
+  #info {
+    min-height: 0;
+  }
 }
+
 @media (max-width: 720px) {
   .container {
     width: 500px;
   }
+  #sidebar {
+    display: none;
+  }
+  #page-content {
+    margin: 0 auto;
+  }
+  #profile {
+    height: auto;
+  }
+  #info {
+    min-height: 0;
+  }
 }
+
 @media (max-width: 540px) {
   .container {
     width: 300px;
+  }
+  #sidebar {
+    display: none;
+  }
+  #page-content {
+    margin: 0 auto;
+  }
+  #profile {
+    height: auto;
+  }
+  #info {
+    min-height: 0;
   }
 }
